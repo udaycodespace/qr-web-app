@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Credify Verify | Result</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+darkMode: "class",
+theme: {
+extend: {
+colors: {
+"primary": "#0066ff",
+"background-light": "#f5f7f8",
+"background-dark": "#0f1723",
+},
+fontFamily: {
+"display": ["Inter", "sans-serif"],
+"satoshi": ["Inter", "sans-serif"]
+},
+borderRadius: {
+"DEFAULT": "0.25rem",
+"lg": "0.5rem",
+"xl": "0.75rem",
+"full": "9999px"
+},
+},
+},
+}
+</script>
+<style>
+body{
+font-family:'Inter',sans-serif;
+}
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen p-4 sm:p-6" data-page="result">
+
+<main class="mx-auto w-full max-w-[1040px]">
+
+<header class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+<div>
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3">
+<span class="text-[10px] font-bold tracking-[0.05em] text-primary uppercase">Official Credify Verification Result</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-[30px] font-bold leading-tight" id="resultHeading">Verification Output</h1>
+</div>
+
+<div class="flex items-center gap-3">
+<div class="inline-flex items-center rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-slate-600 dark:text-slate-300" id="statusBadge">Ready</div>
+<a class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200" href="./index.html" id="verifyAnotherBtn">Verify Another</a>
+</div>
+</header>
+
+<section class="grid gap-4" id="resultCard"></section>
+
+</main>
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

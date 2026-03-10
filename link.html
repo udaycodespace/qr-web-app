@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Credify Verify | Link</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+darkMode: "class",
+theme: {
+extend: {
+colors: {
+"primary": "#0066ff",
+"background-light": "#f5f7f8",
+"background-dark": "#0f1723",
+},
+fontFamily: {
+"display": ["Inter", "sans-serif"],
+"satoshi": ["Inter", "sans-serif"]
+},
+borderRadius: {
+"DEFAULT": "0.25rem",
+"lg": "0.5rem",
+"xl": "0.75rem",
+"full": "9999px"
+},
+},
+},
+}
+</script>
+<style>
+body{
+font-family:'Inter',sans-serif;
+}
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center p-4" data-page="link">
+
+<div class="w-full max-w-[720px] flex flex-col items-center">
+
+<header class="w-full flex flex-col items-center mb-8">
+<div class="flex items-center gap-2 mb-6">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-[22px]">link</span>
+</div>
+<span class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Credify</span>
+</div>
+
+<h1 class="text-slate-900 dark:text-slate-100 text-[28px] font-bold leading-tight text-center mb-2">
+Enter Verification URL
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm text-center max-w-[560px]">
+Paste the full verification link here. Large links are supported and the app will redirect to the result page after verification.
+</p>
+</header>
+
+<main class="w-full">
+<section class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-5">
+<textarea class="w-full min-h-[180px] resize-y rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-sm leading-6" id="qrLinkInput" placeholder="Paste the full Credify verification URL here."></textarea>
+
+<div class="mt-4">
+<button class="w-full sm:w-auto rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white" id="verifyLinkBtn">
+Verify
+</button>
+</div>
+
+<div class="mt-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-sm text-slate-600 dark:text-slate-300" id="linkFeedback">
+Waiting for a verification URL.
+</div>
+</section>
+</main>
+
+<div class="mt-6">
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="./index.html">Back</a>
+</div>
+
+</div>
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

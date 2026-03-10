@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Credify Verify | Upload</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+darkMode: "class",
+theme: {
+extend: {
+colors: {
+"primary": "#0066ff",
+"background-light": "#f5f7f8",
+"background-dark": "#0f1723",
+},
+fontFamily: {
+"display": ["Inter", "sans-serif"],
+"satoshi": ["Inter", "sans-serif"]
+},
+borderRadius: {
+"DEFAULT": "0.25rem",
+"lg": "0.5rem",
+"xl": "0.75rem",
+"full": "9999px"
+},
+},
+},
+}
+</script>
+<style>
+body{
+font-family:'Inter',sans-serif;
+}
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center p-4" data-page="upload">
+
+<div class="w-full max-w-[720px] flex flex-col items-center">
+
+<header class="w-full flex flex-col items-center mb-8">
+<div class="flex items-center gap-2 mb-6">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-[22px]">upload_file</span>
+</div>
+<span class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Credify</span>
+</div>
+
+<h1 class="text-slate-900 dark:text-slate-100 text-[28px] font-bold leading-tight text-center mb-2">
+Upload QR Image
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm text-center max-w-[560px]">
+Upload or drop the QR image here. The app will detect the QR and redirect to the result page.
+</p>
+</header>
+
+<main class="w-full">
+<section class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-5">
+<label class="block cursor-pointer rounded-lg border-2 border-dashed border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 p-8 text-center hover:border-primary transition-colors" for="qrFile" id="uploadDropzone">
+<input accept="image/*" class="hidden" id="qrFile" type="file"/>
+<div class="text-slate-900 dark:text-slate-100 font-semibold text-base">Choose or Drop QR Image</div>
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-400">PNG, JPG, or screenshot</p>
+</label>
+
+<div class="mt-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-sm text-slate-600 dark:text-slate-300" id="uploadFeedback">
+Waiting for a QR image.
+</div>
+</section>
+</main>
+
+<div class="mt-6">
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="./index.html">Back</a>
+</div>
+
+</div>
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

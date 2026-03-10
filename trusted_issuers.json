@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "issuers": {
+    "did:edu:gprec": {
+      "name": "GPREC",
+      "algorithm": "PS256",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAkF5v1ym4AlzX8csMwGhZ\nUsXG9MpOOc+vExW561RDcRjjMNBBVF2KHzkhJOKYCSBJwvpJ+IhoWf42tzuhzBY9\n8Rrb6heKxaI5PmLDS+pOR16ynZvFulfNItYbo17R+XaTd55ftz3wMmn3nzvvkIxV\nMadi7BPJ8s8Y1TR23M76w0WNN4s69z7qdUt21g6LMfwh1bJul2ycaaGNVB1kUIgx\nmUGE+YWU8UHLzmcPE7PaVMEfzH96lI1FdEXD2F6dHNRU3T/YGJ2YZA6lCkFi4Bpf\nR2CVrtuYNijGk162N9C60oSCzu8UYTI5vwBePmf9R84dlk8Qv0Lv8vUWbxIhoIaX\nBFROegACcCBHtENUg4ahktR4G/JbBWSvl35fE9hZku6j3KQJbRDs1h/dbgAfBoLT\ngdBftQqxXNRyzrfVT0GtSstnMiPW/AZTtiSxMYoEWyC0u45c59iXfB+NUpliq8lI\nCt7g+alzO6yfFzb3trQjCAiqjaS44FLzxcCO47KzRWZ+DR5qAizkjyCthr6nvsMY\nrh7Emujzbg1e8nCfqDPzJT7FAh6Zq7UasMJHQ+1XdTI4rW3s+VSIaIgO1R+/fSoP\nmPKXP8/7sUyxRMo/X/dimGQzpaT12DerfFbmVcTaiTPNBnSqR3T7AibUAD4Yg0es\nFogAXPXaoh235wypYfOujM0CAwEAAQ==\n-----END PUBLIC KEY-----\n"
+    }
+  }
+}
